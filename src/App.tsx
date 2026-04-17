@@ -48,7 +48,7 @@ export default function ProcureAI() {
   }
 
   return (
-    <div className="shell">
+    <div className="grid grid-cols-[240px_1fr] grid-rows-[52px_1fr] h-screen overflow-hidden">
       <Topbar/>
       <Sidebar
         cat={state.cat}
@@ -57,7 +57,7 @@ export default function ProcureAI() {
         activeHistory={state.activeHistory}
         onLoadHistory={e => dispatch({ type: "LOAD_HISTORY", payload: e })}
       />
-      <div className="workspace">
+      <div className="flex flex-col bg-surface2 overflow-hidden">
         <InputZone
           q={state.q}
           foc={state.foc}
